@@ -21,6 +21,21 @@ repositories {
     }
 }
 
+task copyReport(type: Copy) {
+    
+    def fileWebPage = "src/main/resources/com/matteoveroni/elementoproject/client/WebPage.html"
+    println "fileWebPage: " + fileWebPage
+    from file("src/main/resources/com/matteoveroni/elementoproject/client/WebPage.html")
+
+    println "buildDir: " + buildDir
+    
+    def destinationFolder = "${buildDir}/classes/java/main/com/matteoveroni/elementoproject/client/"
+    println "destinationFolder: " + destinationFolder
+    into file(destinationFolder)
+}
+
+compileJava.dependsOn copyReport
+
 dependencies {
     compile group: 'com.google.gwt', name: 'gwt-user', version: '2.8.2'
 
@@ -40,7 +55,7 @@ dependencies {
 
 gwt {
     gwtVersion = '2.8.2'
-    modules 'it.giuffre.App'
+    modules 'com.matteoveroni.elementoproject.ElementoProject'
     minHeapSize = "256M"
     maxHeapSize = "1024M"
 
