@@ -5,7 +5,7 @@ import org.jboss.gwt.elemento.core.IsElement;
 //import static org.jboss.gwt.elemento.processor.context.DataElementInfo.Kind.HTMLElement;
 import org.jboss.gwt.elemento.template.Templated;
 
-@Templated("PaginaUno.html")
+@Templated("WebPage.html")
 public abstract class WebPage implements IsElement<HTMLElement> {
 
 	static WebPage create() {
