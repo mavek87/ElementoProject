@@ -6,7 +6,7 @@ import org.jboss.gwt.elemento.core.IsElement;
 import org.jboss.gwt.elemento.template.Templated;
 
 @Templated("WebPage.html")
-public abstract class WebPage implements IsElement<HTMLElement> {
+abstract class WebPage implements IsElement<HTMLElement> {
 
 	static WebPage create() {
 		return new Templated_WebPage();
