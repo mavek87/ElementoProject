@@ -22,15 +22,10 @@ repositories {
 }
 
 task copyReport(type: Copy) {
-    
     def fileWebPage = "src/main/resources/com/matteoveroni/elementoproject/client/WebPage.html"
-    println "fileWebPage: " + fileWebPage
-    from file("src/main/resources/com/matteoveroni/elementoproject/client/WebPage.html")
+    from file(fileWebPage)
 
-    println "buildDir: " + buildDir
-    
     def destinationFolder = "${buildDir}/classes/java/main/com/matteoveroni/elementoproject/client/"
-    println "destinationFolder: " + destinationFolder
     into file(destinationFolder)
 }
 
