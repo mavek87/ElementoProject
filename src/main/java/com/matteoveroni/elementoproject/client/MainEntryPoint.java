@@ -7,7 +7,7 @@ public class MainEntryPoint implements EntryPoint{
 
 	@Override
 	public void onModuleLoad() {
-//		WebPage webPage = WebPage.create();
-//		document.body.appendChild(webPage.asElement());
+		WebPage webPage = WebPage.create();
+		document.body.appendChild(webPage.asElement());
 	}
 }
