@@ -25,7 +25,7 @@ repositories {
     }
 }
 
-// UNCOMMENTING THIS CODE THE PROGRAM RUN BUT COMPILER ERROR IS STILL SHOWN IN THE IDE
+// UNCOMMENTING THIS CODE THE PROGRAM RUNS BUT COMPILER ERROR IS STILL SHOWN IN THE IDE
 task copyWebPage(type: Copy) {
     def fileWebPage = "src/main/resources/com/matteoveroni/elementoproject/client/WebPage.html"
     from file(fileWebPage)
